@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump Word Count</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        img {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .count {
+            font-size: 24px;
+            color: #333;
+        }
+        .error {
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Donald Trump Word Count</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg" alt="Donald Trump" width="300">
+    <div class="count">
+        {% if count is not none %}
+            The word "Trump" appears {{ count }} times on the SMH homepage.
+        {% else %}
+            <p class="error">Failed to retrieve data.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
